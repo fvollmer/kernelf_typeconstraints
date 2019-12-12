@@ -14,6 +14,11 @@
         </modelRoot>
       </models>
       <external-templates />
+      <dependencies>
+        <dependency reexport="false">dbe08fb5-334d-4b64-86a0-622406fa0e87(org.iets3.core.expr.base.runtime)</dependency>
+        <dependency reexport="false">b76a0f63-5959-456b-993a-c796cc0d0c13(org.iets3.core.expr.base.collections.stubs)</dependency>
+        <dependency reexport="false">2f7e2e35-6e74-4c43-9fa5-2465d68f5996(org.iets3.core.expr.collections)</dependency>
+      </dependencies>
       <languageVersions>
         <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="8" />
         <language slang="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" version="0" />
@@ -48,6 +53,7 @@
         <module reference="d09a16fb-1d68-4a92-a5a4-20b4b2f86a62(com.mbeddr.mpsutil.jung)" version="0" />
         <module reference="b4d28e19-7d2d-47e9-943e-3a41f97a0e52(com.mbeddr.mpsutil.plantuml.node)" version="0" />
         <module reference="726886d1-ef90-4249-a08f-1e3ec23a7113(com.mbeddr.mpsutil.traceExplorer)" version="0" />
+        <module reference="3819ba36-98f4-49ac-b779-34f3a458c09b(com.mbeddr.mpsutil.varscope)" version="0" />
         <module reference="cce85e64-7b37-4ad5-b0e6-9d18324cdfb3(de.itemis.mps.selection.runtime)" version="0" />
         <module reference="92d2ea16-5a42-4fdf-a676-c7604efe3504(de.slisson.mps.richtext)" version="0" />
         <module reference="41e48b36-8484-42e1-9f7f-2a8d3fc7bfeb(de.uni_luebeck.typeConstraint)" version="0" />
@@ -65,6 +71,10 @@
         <module reference="db8bd035-3f51-41d8-8fed-954c202d18be(org.iets3.analysis.base)" version="0" />
         <module reference="7b68d745-a7b8-48b9-bd9c-05c0f8725a35(org.iets3.core.base)" version="0" />
         <module reference="cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)" version="1" />
+        <module reference="b76a0f63-5959-456b-993a-c796cc0d0c13(org.iets3.core.expr.base.collections.stubs)" version="0" />
+        <module reference="dbe08fb5-334d-4b64-86a0-622406fa0e87(org.iets3.core.expr.base.runtime)" version="0" />
+        <module reference="2f7e2e35-6e74-4c43-9fa5-2465d68f5996(org.iets3.core.expr.collections)" version="5" />
+        <module reference="9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)" version="0" />
       </dependencyVersions>
       <mapping-priorities />
     </generator>
@@ -139,6 +149,7 @@
   </dependencyVersions>
   <extendedLanguages>
     <extendedLanguage>cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)</extendedLanguage>
+    <extendedLanguage>9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)</extendedLanguage>
   </extendedLanguages>
 </language>
 

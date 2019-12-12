@@ -6,6 +6,9 @@
     </modelRoot>
   </models>
   <sourcePath />
+  <dependencies>
+    <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
+  </dependencies>
   <languageVersions>
     <language slang="l:d4280a54-f6df-4383-aa41-d1b2bffa7eb1:com.mbeddr.core.base" version="5" />
     <language slang="l:63e0e566-5131-447e-90e3-12ea330e1a00:com.mbeddr.mpsutil.blutil" version="1" />
@@ -32,6 +35,7 @@
     <language slang="l:71934284-d7d1-45ee-a054-8c072591085f:org.iets3.core.expr.toplevel" version="4" />
   </languageVersions>
   <dependencyVersions>
+    <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
     <module reference="e17976ff-f2c1-4ddb-bbdc-9398fe751991(de.uni_luebeck.kernelf.typeConstraint.sandbox)" version="0" />
   </dependencyVersions>
 </solution>
