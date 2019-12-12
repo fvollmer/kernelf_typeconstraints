@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/de.uni_luebeck.typeConstraint/de.uni_luebeck.typeConstraint.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/de.uni_luebeck.kernelf.typeConstraint.sandbox/de.uni_luebeck.kernelf.typeConstraint.sandbox.msd" folder="" />
+    </projectModules>
+  </component>
+</project>

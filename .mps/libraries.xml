@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectLibraryManager">
+    <option name="libraries">
+      <map>
+        <entry key="com.mbeddr.platform">
+          <value>
+            <Library>
+              <option name="name" value="com.mbeddr.platform" />
+              <option name="path" value="$PROJECT_DIR$/lib/com.mbeddr.platform" />
+            </Library>
+          </value>
+        </entry>
+        <entry key="org.iets3.opensource">
+          <value>
+            <Library>
+              <option name="name" value="org.iets3.opensource" />
+              <option name="path" value="$PROJECT_DIR$/lib/org.iets3.opensource" />
+            </Library>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
