@@ -8,6 +8,7 @@
   <imports>
     <import index="zzzn" ref="r:af0af2e7-f7e1-4536-83b5-6bf010d4afd2(org.iets3.core.expr.lambda.structure)" />
     <import index="mpez" ref="r:3ec456e0-1b28-46a6-97e6-d6b2ca46bddf(de.uni_luebeck.typeConstraint.structure)" />
+    <import index="tpd4" ref="r:00000000-0000-4000-0000-011c895902b4(jetbrains.mps.lang.typesystem.structure)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -28,6 +29,9 @@
       </concept>
       <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
         <child id="1137022507850" name="body" index="2VODD2" />
+      </concept>
+      <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
+        <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <property id="1176718929932" name="isFinal" index="3TUv4t" />
@@ -78,6 +82,12 @@
         <child id="1185805056450" name="argument" index="nvjzm" />
         <child id="1205761991995" name="argumentRepresentator" index="2X0Ygz" />
       </concept>
+      <concept id="1175517767210" name="jetbrains.mps.lang.typesystem.structure.ReportErrorStatement" flags="nn" index="2MkqsV">
+        <child id="1175517851849" name="errorString" index="2MkJ7o" />
+      </concept>
+      <concept id="1227096774658" name="jetbrains.mps.lang.typesystem.structure.MessageStatement" flags="ng" index="2OEH$v">
+        <child id="1227096802790" name="nodeToReport" index="2OEOjV" />
+      </concept>
       <concept id="1205762105978" name="jetbrains.mps.lang.typesystem.structure.WhenConcreteVariableDeclaration" flags="ng" index="2X1qdy" />
       <concept id="1205762656241" name="jetbrains.mps.lang.typesystem.structure.WhenConcreteVariableReference" flags="nn" index="2X3wrD">
         <reference id="1205762683928" name="whenConcreteVar" index="2X3Bk0" />
@@ -86,9 +96,11 @@
         <child id="1766949807893591548" name="overridesFun" index="bX4a1" />
         <child id="1195213635060" name="body" index="18ibNy" />
       </concept>
+      <concept id="1195214364922" name="jetbrains.mps.lang.typesystem.structure.NonTypesystemRule" flags="ig" index="18kY7G" />
       <concept id="6405009306797516074" name="jetbrains.mps.lang.typesystem.structure.SubstituteTypeRule" flags="ig" index="3qnSWH">
         <child id="7323318266641100480" name="body" index="3hT0BD" />
       </concept>
+      <concept id="1176544042499" name="jetbrains.mps.lang.typesystem.structure.Node_TypeOperation" flags="nn" index="3JvlWi" />
       <concept id="1174642788531" name="jetbrains.mps.lang.typesystem.structure.ConceptReference" flags="ig" index="1YaCAy">
         <reference id="1174642800329" name="concept" index="1YaFvo" />
       </concept>
@@ -130,6 +142,7 @@
         <child id="1177027386292" name="conceptArgument" index="cj9EA" />
       </concept>
       <concept id="1171999116870" name="jetbrains.mps.lang.smodel.structure.Node_IsNullOperation" flags="nn" index="3w_OXm" />
+      <concept id="1144100932627" name="jetbrains.mps.lang.smodel.structure.OperationParm_Inclusion" flags="ng" index="1xIGOp" />
       <concept id="1144101972840" name="jetbrains.mps.lang.smodel.structure.OperationParm_Concept" flags="ng" index="1xMEDy">
         <child id="1207343664468" name="conceptArgument" index="ri$Ld" />
       </concept>
@@ -181,6 +194,7 @@
         <child id="1197932505799" name="map" index="3ElQJh" />
         <child id="1197932525128" name="key" index="3ElVtu" />
       </concept>
+      <concept id="1176501494711" name="jetbrains.mps.baseLanguage.collections.structure.IsNotEmptyOperation" flags="nn" index="3GX2aA" />
     </language>
   </registry>
   <node concept="1YbPZF" id="1mNGX8M0xBM">
@@ -306,6 +320,7 @@
               <node concept="3cpWs8" id="Z0RFWNIJI4" role="3cqZAp">
                 <node concept="3cpWsn" id="Z0RFWNIJI5" role="3cpWs9">
                   <property role="TrG5h" value="newfunType" />
+                  <property role="3TUv4t" value="true" />
                   <node concept="3Tqbb2" id="Z0RFWNIJHV" role="1tU5fm">
                     <ref role="ehGHo" to="zzzn:6zmBjqUjGYQ" resolve="FunctionType" />
                   </node>
@@ -562,6 +577,46 @@
     <node concept="1YaCAy" id="4YVJCZK9KZZ" role="1YuTPh">
       <property role="TrG5h" value="typeVariableRef" />
       <ref role="1YaFvo" to="mpez:1mNGX8M0jcM" resolve="TypeVariableRef" />
+    </node>
+  </node>
+  <node concept="18kY7G" id="5uqyUFmwhuV">
+    <property role="TrG5h" value="check_FunctionStyleExecOp" />
+    <node concept="3clFbS" id="5uqyUFmwhuW" role="18ibNy">
+      <node concept="3clFbJ" id="5uqyUFmwEH4" role="3cqZAp">
+        <node concept="2OqwBi" id="5uqyUFmwUjS" role="3clFbw">
+          <node concept="2OqwBi" id="5uqyUFmwG2E" role="2Oq$k0">
+            <node concept="2OqwBi" id="5uqyUFmwEW4" role="2Oq$k0">
+              <node concept="1YBJjd" id="5uqyUFmwEHF" role="2Oq$k0">
+                <ref role="1YBMHb" node="5uqyUFmwhuY" resolve="functionStyleExecOp" />
+              </node>
+              <node concept="3JvlWi" id="5uqyUFmwFIT" role="2OqNvi" />
+            </node>
+            <node concept="2Rf3mk" id="5uqyUFmwQTe" role="2OqNvi">
+              <node concept="1xMEDy" id="5uqyUFmwQTg" role="1xVPHs">
+                <node concept="chp4Y" id="5uqyUFmwRCL" role="ri$Ld">
+                  <ref role="cht4Q" to="tpd4:hfSilrV" resolve="RuntimeTypeVariable" />
+                </node>
+              </node>
+              <node concept="1xIGOp" id="5uqyUFmx19L" role="1xVPHs" />
+            </node>
+          </node>
+          <node concept="3GX2aA" id="5uqyUFmwWui" role="2OqNvi" />
+        </node>
+        <node concept="3clFbS" id="5uqyUFmwEH6" role="3clFbx">
+          <node concept="2MkqsV" id="5uqyUFmwGcS" role="3cqZAp">
+            <node concept="Xl_RD" id="5uqyUFmwGdv" role="2MkJ7o">
+              <property role="Xl_RC" value="Could not infer type" />
+            </node>
+            <node concept="1YBJjd" id="5uqyUFmwGgC" role="2OEOjV">
+              <ref role="1YBMHb" node="5uqyUFmwhuY" resolve="functionStyleExecOp" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="5uqyUFmwhuY" role="1YuTPh">
+      <property role="TrG5h" value="functionStyleExecOp" />
+      <ref role="1YaFvo" to="mpez:5uqyUFmvHaV" resolve="FunctionStyleExecOp" />
     </node>
   </node>
 </model>
